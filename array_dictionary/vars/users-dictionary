@@ -1,0 +1,13 @@
+users:
+  chaitanya:
+    username: chaitanya
+    homedir: /home/chaitanya
+    shell: /bin/bash
+  girija:
+    username: girija
+    homedir: /home/girija
+    shell: /bin/sh
+  raja:
+    username: raja
+    homedir: /home/raja
+    shell: /bin/bash
