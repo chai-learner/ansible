@@ -1,0 +1,10 @@
+---
+- name: multipe condition check demo using when
+  hosts: lamp
+  tasks:
+  - package:
+      name: httpd
+      state: installed
+    when:
+      - ansible_distribution == "RedHat"
+      - ansible_memfree_mb > 1512
