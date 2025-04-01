@@ -1,0 +1,13 @@
+---
+- name: loops using register variables
+  hosts: lamp
+  tasks:
+  - name: show loop register
+    shell: "echo {{ item }}"
+    loop:
+     - "one"
+     - "two"
+    register: output
+  - name: show register result
+    debug:
+      var: output
