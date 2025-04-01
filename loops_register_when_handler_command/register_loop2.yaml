@@ -1,0 +1,17 @@
+---
+- name: register variable using a loop list
+  hosts: localhost
+  tasks:
+   - name: create target directory
+     file:
+       path: /mnt/bkspool
+       state: directory
+   - name: retrieve the list of home directories
+     command: ls /home
+     register: user_list
+   - name: add home directories to backup spooler
+     file:
+       path: /mnt/bkspool/{{ item }}
+       src: /home/{{ item }}
+       state: link
+     loop: "{{ user_list.stdout_lines }}"
