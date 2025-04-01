@@ -1,0 +1,11 @@
+---
+- name: configure web server
+  hosts: lamp
+  tasks:
+    - name: this is the {{ web_package }} package
+      debug:
+        msg: "installing {{ web_package }}"
+    - name: this is the {{ web_service }} service
+      debug:
+        msg: "starting {{ web_service }}"
+...
