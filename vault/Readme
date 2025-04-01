@@ -1,0 +1,9 @@
+for this programme to execute, we have to first create a secret.yaml file using the below vault command 
+  $$ ansible-vault create secret.yaml
+it will prompt for a password we have to give any password and save the same in vault.pass file
+in the secret file we have to pass variables 
+  username: chai
+  pwhash: password
+this will create an encrypted file with the name secret.yaml
+then we have to run the below command to run the playbook
+  $$ ansible-playbook --vault-password-file=vault.pass create_user.yaml
