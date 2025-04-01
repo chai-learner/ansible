@@ -1,0 +1,13 @@
+---
+- name: show list also known as array
+  hosts: lamp
+  vars_files:
+    - vars/users-list
+  tasks:
+    - name: print array values
+      debug:
+        msg: "user {{ item.username }} has homedirectory {{ item.homedir }} and shell {{ item.shell }}"
+      loop: "{{ users }}"
+    - name: pring the second array value
+      debug:
+        msg: the second item is {{ users[1] }}
