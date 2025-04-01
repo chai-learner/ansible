@@ -1,0 +1,10 @@
+---
+- name: show dictionary also known as hash
+  hosts: lamp
+  vars_files:
+    - vars/users-dictionary
+  tasks:
+    - name: Display user information
+      debug:
+        msg: "User {{ users.chaitanya.username }} has the home directory {{ users.chaitanya.homedir }} and shell {{ users.chaitanya.shell }}"
+...
