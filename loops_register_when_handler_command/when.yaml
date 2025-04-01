@@ -1,0 +1,15 @@
+---
+- name: when demo
+  hosts: lamp
+  vars:
+    supported_distributions:
+      - RedHat
+      - ubuntu
+      - centOS
+      - Fedora
+  tasks:
+  - name: install redhat family packages
+    yum:
+      name: nginx
+      state: present
+    when: ansible_distribution in supported_distributions
