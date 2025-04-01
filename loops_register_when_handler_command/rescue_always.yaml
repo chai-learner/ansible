@@ -1,0 +1,17 @@
+---
+- name: using bocks rescue and always
+  hosts: lamp
+  tasks:
+  - name: sample task to remove file
+    block:
+      - name: remove file
+        shell:
+          cmd: /usr/bin/rm /var/www/html/index.html
+    rescue:
+      - name: create file
+        shell:
+          cmd: /usr/bin/touch /var/www/html/index.html
+    always:
+      - name: logging
+        shell:
+          cmd: /usr/bin/logger hello
