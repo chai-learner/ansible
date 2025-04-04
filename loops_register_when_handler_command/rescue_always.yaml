@@ -14,4 +14,4 @@
     always:
       - name: logging
         shell:
-          cmd: /usr/bin/logger hello
+          cmd: /usr/bin/logger "Ansible task completed: removed index.html or recreated it"
