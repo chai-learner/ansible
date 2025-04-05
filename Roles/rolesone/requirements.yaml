@@ -1,0 +1,9 @@
+# from ansible galaxy
+- src: geerlingguy.nginx
+
+- src: geerlingguy.nginx
+  version: 2.7.0
+  name: nginx
+# we can also install a role form tar file
+# - src: file:///opt/local/roles/myrole.tar
+#   name: myrole
