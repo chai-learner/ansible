@@ -1,0 +1,9 @@
+---
+- name: update host file dynamically
+  hosts: lamp
+  tasks:
+  - name: update /etc/hosts
+    template:
+      src: templates/hosts.j2
+      dest: /etc/hosts
+  
