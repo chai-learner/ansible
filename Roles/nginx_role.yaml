@@ -1,7 +1,0 @@
----
-- name: install nginx using role
-  hosts: lamp
-  user: ansibleuser
-  become: true
-  roles:
-    - role: geerlingguy.nginx

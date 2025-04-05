@@ -1,6 +1,0 @@
----
-- name: custom role calling
-  hosts: lamp
-  tasks:
-   - role: motd
-     system_manager: informchaitanyaballa@gmail.com
