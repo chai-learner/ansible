@@ -1,0 +1,10 @@
+to run the nginx_role.yaml
+
+we need to have the nginx role already installed in our host machine, if not installed please run the below command
+$$ ansible-galaxy install geerlingguy-nginx
+
+we have created a custom role in roles folder and we are calling it in custom_role_call.yaml 
+
+we can also make a requirements (set of roles) to download and we can do it at one go.
+  to deonstrate it we have created rolesone folder and requirements.yaml file
+  $$ ansible-galaxy install -r rolesone/requirements.yaml -p rolesone/
