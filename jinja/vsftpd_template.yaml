@@ -10,7 +10,7 @@
   - name: install vstfpd
     yum:
       name: vsftpd
-  - name:use template to copy ftp configuration
+  - name: use template to copy ftp configuration
     template:
       src: vsftpd.j2
       dest: /etc/vsftpd/vsftpd.conf
